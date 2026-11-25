@@ -19,6 +19,10 @@ void createInertiaApp({
                 return [AppLayout, SettingsLayout];
             default:
                 return AppLayout;
+            case name === 'Welcome':
+                return null;
+            case name.startsWith('garden/'):
+                return null;
         }
     },
     withApp: (app) => {
